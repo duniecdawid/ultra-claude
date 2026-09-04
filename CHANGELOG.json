@@ -1,5 +1,12 @@
 [
   {
+    "seq": 242,
+    "version": "2026.09.04-1",
+    "date": "2026-09-04",
+    "summary": "plan-execution: ops tasks that run the system live go through the project's live-run harness — task-classification points an ops task's Patterns at documentation/technology/testing/final-gate.md and the skill it names, with success criteria phrased as what that procedure records (opus, not sonnet, when the run is judged from the harness's record); Task Executor gains Skill + Agent tools (nested subagents, v2.1.172+) so it can load that skill and spawn the one-shot sub-agents its flow calls for, and treats the harness's record (run dir, reports, decision feed) as the ops log's evidence and its window as the monitoring window; help entry synced",
+    "migration": null
+  },
+  {
     "seq": 241,
     "version": "2026.08.20-2",
     "date": "2026-08-20",

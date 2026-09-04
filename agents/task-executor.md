@@ -10,6 +10,8 @@ tools:
   - Grep
   - Bash
   - Monitor
+  - Skill
+  - Agent
   - SendMessage
 ---
 
@@ -237,6 +239,7 @@ An ops task operates a system — deploy/release, verify, monitor — instead of
 
 - **Step 3 — no take gate.** Write `plan.md` as a **runbook delta**: the concrete commands to run, how each success criterion will be verified (health checks, log reads, dashboards — pointers come from task.md Patterns/Research), and a rollback note. The deviation self-check applies: (a) only if task.md lists Files, (b) unchanged, (c) against task.md constraints only — no takes exist.
 - **Step 4 — operate instead of implement.** Run the runbook. No impl tests; you verify the success criteria.
+- **Live runs go through the project's harness.** When the project's testing config (`documentation/technology/testing/final-gate.md`) names a procedure or skill for running the system live — a supervision harness, a campaign, a soak — that procedure IS the runbook: load its skill (`Skill`) and run it end to end as its operator would, including any one-shot sub-agents the flow calls for (`Agent`, Mode S/F per `references/agent-spawn-modes.md`; never a named teammate). The harness's own record (run directory, reports, decision feed) is the ops log's evidence — `impl.md` points at it rather than re-deriving it with ad-hoc queries — and the harness's window is the monitoring window below.
 - **Step 4.5 — signal after verification, not before.** The pre-flight build gate does not apply. Send `CODE_COMPLETE` ("Task $TASK_ID ops work complete — writing ops log") only after every success criterion except monitoring windows is verified. `impl.md` = **ops log**: commands run, observed results per criterion, deviations, rollback status.
 - **Monitoring windows** ("watch for X minutes" criteria): after the CODE_COMPLETE signal, wait in bounded Monitor rounds per protocol §3 — never a foreground Bash loop. Record the window's observations in impl.md when it closes.
 - **Step 5 — skipped entirely.** No review, no test, no fix cycles.

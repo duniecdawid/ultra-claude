@@ -11,6 +11,7 @@ Canonical taxonomy for two per-task choices every plan records: **type** (team s
 
 - Anything producing review-worthy source is `code`, however small.
 - `ops` has nothing to review and no test suite to run — the success criteria ARE the verification (health checks, log reads, a monitoring window), done by the Executor itself. Deploy/monitor procedure pointers go in the task's **Patterns:**/**Research:** fields like any other task knowledge.
+- **An `ops` task that runs the system live follows the project's live-run procedure** (`documentation/technology/testing/final-gate.md`, when the project has one): Patterns points at it and at the skill it names, and the success criteria are phrased as what that procedure records (its predictions, conditions, reports) so the run's own record is the evidence — not a hand-driven window beside the harness.
 - Work that both writes code and deploys it is two tasks: `code`, then a dependent `ops`. This is the sanctioned exception to merge-first — the team shapes differ, so merging buys nothing.
 - `ops` tasks don't count toward the final gate (nothing to regress) and are exempt from the sizing minimum (see `task-sizing.md`).
 
@@ -20,7 +21,7 @@ Only the Executor varies. Reviewer, Tester, PM stay sonnet regardless.
 
 | Model | When |
 |-------|------|
-| `sonnet` | Mechanical, pattern-following work: config, applying an established codebase pattern, clear spec, low ambiguity. Default for `ops` |
+| `sonnet` | Mechanical, pattern-following work: config, applying an established codebase pattern, clear spec, low ambiguity. Default for `ops` — except a live run judged from a harness's record, which is `opus` |
 | `opus` | Standard code delivery. Default for `code` |
 | `fable` | Hard end: architectural or cross-cutting change, ambiguous or algorithmically hard problem — often the single task a whole plan rides on. **Burns usage at ~2× opus — requires the user's explicit approval** (in Stage 3 discussion or at the Stage 4 gate); never write into a plan without it |
 
