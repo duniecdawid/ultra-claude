@@ -1,5 +1,12 @@
 [
   {
+    "seq": 243,
+    "version": "2026.09.13-1",
+    "date": "2026-09-13",
+    "summary": "docs site + README: the project is source-available, not open source. The licence (Ultra Claude Source Available License) permits use but not forks or redistribution, so the landing-page hero, trust strip (Source available · Free to use) and cost FAQ now say so plainly; README reference row corrected to the real counts (23 skills, 11 agents)",
+    "migration": null
+  },
+  {
     "seq": 242,
     "version": "2026.09.04-1",
     "date": "2026-09-04",

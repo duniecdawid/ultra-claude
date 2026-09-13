@@ -118,4 +118,4 @@ Detailed documentation is available at [ultra-claude.dev](https://ultra-claude.d
 | [Debugging](https://ultra-claude.dev/docs/debugging) | Hypothesis-driven bug investigation |
 | [Verification](https://ultra-claude.dev/docs/verification) | Doc-code drift detection and fixes |
 | [Technology Standards](https://ultra-claude.dev/docs/standards) | Define, enforce, and verify coding standards |
-| [Reference](https://ultra-claude.dev/docs/reference) | All 22 skills and 10 agents |
+| [Reference](https://ultra-claude.dev/docs/reference) | All 23 skills and 11 agents |
