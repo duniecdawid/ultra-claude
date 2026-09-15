@@ -1,0 +1,96 @@
+name: Bug report
+description: Something in Ultra Claude behaves differently than documented
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. The fields below are the ones that usually decide
+        whether a problem can be reproduced.
+
+        Questions, ideas, and "here's what I built with it" belong in
+        [Discussions](https://github.com/duniecdawid/ultra-claude-code/discussions)
+        rather than here.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The commands you ran, in order. A minimal case beats a complete one.
+      placeholder: |
+        1. /uc:migrate on a fresh Node project
+        2. /uc:feature-mode add login
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which skill or agent
+      options:
+        - /uc:setup
+        - /uc:migrate
+        - /uc:feature-mode
+        - /uc:plan-execution
+        - /uc:debug-mode
+        - /uc:doc-code-verification-mode
+        - /uc:discovery-mode
+        - /uc:roadmap
+        - /uc:research
+        - /uc:backlog
+        - /uc:update
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: uc-version
+    attributes:
+      label: Ultra Claude version
+      description: The `version` field in `.claude-plugin/plugin.json`, or what `/uc:update` reports.
+      placeholder: "2026.09.15-2"
+    validations:
+      required: true
+
+  - type: input
+    id: cc-version
+    attributes:
+      label: Claude Code version
+      description: Output of `claude --version`.
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "macOS 15.2 / Ubuntu 24.04 / Windows 11 + WSL2"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: Environment
+      description: Several failure modes trace back to these.
+      options:
+        - label: I ran `/uc:setup` on this machine
+        - label: I am running inside tmux
+        - label: I have a `~/.claude/skills/machine-context/` directory
+        - label: The plan involved agent teams (multiple panes or teammates)
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Paste the shortest excerpt that shows the failure. Scrub any paths or addresses you would rather not publish.
+      render: shell

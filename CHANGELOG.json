@@ -1,5 +1,12 @@
 [
   {
+    "seq": 246,
+    "version": "2026.09.15-3",
+    "date": "2026-09-15",
+    "summary": "Add .github community files — the directory has never existed, so the repo had no issue templates, no security policy and no PR guidance. bug_report.yml is a structured issue form asking for the fields that actually decide reproducibility (Ultra Claude version, Claude Code version, OS, which skill, whether /uc:setup ran, tmux, machine-context present). config.yml disables blank issues and routes questions, ideas and show-and-tell to Discussions, keeping the issue tracker a bug-only channel. pull_request_template.md turns the CLAUDE.md MANDATORY rules into a checklist an outside contributor can follow. No issues were seeded; the local backlog stays private",
+    "migration": null
+  },
+  {
     "seq": 245,
     "version": "2026.09.15-2",
     "date": "2026-09-15",
