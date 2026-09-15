@@ -7,7 +7,7 @@ ACCOUNTS_DIR="$ULTRA_DIR/accounts"
 
 # slugifyEmail: normalize email into a filesystem-safe account ID.
 # Rules: lowercase, @ → -at-, . → -, strip remaining non-alphanumeric (keep hyphens).
-# Example: "Jane.Doe@Example.com" → "dawid-duniec-at-axb-co"
+# Example: "Jane.Doe@Example.com" → "jane-doe-at-example-com"
 slugifyEmail() {
   echo "$1" | tr '[:upper:]' '[:lower:]' | sed 's/@/-at-/g; s/\./-/g; s/[^a-z0-9-]//g'
 }

@@ -1,5 +1,12 @@
 [
   {
+    "seq": 244,
+    "version": "2026.09.15-1",
+    "date": "2026-09-15",
+    "summary": "scripts/lib.sh + railway references: scrub machine-specific values ahead of deliberate repo publicity. The slugifyEmail example, the Tailscale router hostname (4 sites across config.md and tailscale.md) and the tailnet identity were real values from the maintainer's machine, violating the repo's own No Machine-Specific Code rule; replaced with neutral placeholders (Jane.Doe@Example.com, example-router, you@example.com)",
+    "migration": null
+  },
+  {
     "seq": 243,
     "version": "2026.09.13-1",
     "date": "2026-09-13",
