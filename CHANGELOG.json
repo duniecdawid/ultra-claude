@@ -1,5 +1,12 @@
 [
   {
+    "seq": 245,
+    "version": "2026.09.15-2",
+    "date": "2026-09-15",
+    "summary": "LICENSE: replace the bespoke Ultra Claude Source Available License with FSL-1.1-ALv2 (Functional Source License, Apache-2.0 future license). The old text was self-contradictory — clause 3 banned forking while clause 5 anticipated pull requests, and a PR on GitHub requires a fork — and clause 1 (NO DERIVATIVES) forbade users editing a skill locally, which /uc:setup and /uc:migrate encourage. FSL permits use, modification, derivatives, forks and redistribution, restricts only Competing Use, requires unconditional attribution and reserves the Ultra Claude name, and converts each version to Apache-2.0 after two years. The contribution grant (old clause 5) moves to .github/CONTRIBUTING.md so LICENSE stays byte-identical to the canonical template. Supersedes seq 243, which stated the licence allowed neither forks nor redistribution: the site FAQ asserting that is now false and was rewritten in the same commit. Manifests gain homepage/repository/license/keywords; docs/server.js gains app.locals.repoUrl as the single source of truth for the repo URL",
+    "migration": null
+  },
+  {
     "seq": 244,
     "version": "2026.09.15-1",
     "date": "2026-09-15",

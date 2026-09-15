@@ -8,6 +8,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Single source of truth for the repo URL — referenced by every view.
+// Keep this in sync if the repository is ever renamed.
+app.locals.repoUrl = 'https://github.com/duniecdawid/ultra-claude-code';
+
 const pages = {
   'setup': { title: 'Setup & Migrate', description: 'Install Ultra Claude, configure your machine, and initialize projects with documentation structure.' },
   'discovery': { title: 'Discovery', description: 'Product discovery and market research with AI-powered parallel investigation.' },

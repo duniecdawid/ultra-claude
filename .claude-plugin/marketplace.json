@@ -10,9 +10,11 @@
       "name": "uc",
       "source": "./",
       "description": "Specification-driven development platform for Claude Code",
-      "version": "2026.09.15-1",
-      "category": "development"
+      "version": "2026.09.15-2",
+      "category": "development",
+      "homepage": "https://ultra-claude.dev",
+      "license": "FSL-1.1-ALv2"
     }
   ],
-  "version": "2026.09.15-1"
+  "version": "2026.09.15-2"
 }
