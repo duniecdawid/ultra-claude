@@ -1,5 +1,12 @@
 [
   {
+    "seq": 249,
+    "version": "2026.09.15-6",
+    "date": "2026-09-15",
+    "summary": "Rename the GitHub repository ultra-claude-code -> ultra-claude, collapsing four spellings of the same project (repo, marketplace name ultra-claude, domain ultra-claude.dev, npm ultraclaude-agent) toward one. Gated on a throwaway-repo probe run before touching the real repo, which proved all three paths survive GitHub rename redirects: a fresh marketplace add via the old slug, an existing clone whose origin still points at the old URL, and the REST API. Every first-party reference updated across 14 files so the redirect only ever carries links already published elsewhere. README rewritten as a getting-started for people who arrive at GitHub directly — install, setup, migrate, first feature above the fold, badges, contributing and licence sections, and the ~60-line directory-structure dump removed as contributor documentation that belongs in CONTRIBUTING.md. Records debt item D-001: nothing may ever occupy the old repo name, or every published install command breaks",
+    "migration": null
+  },
+  {
     "seq": 248,
     "version": "2026.09.15-5",
     "date": "2026-09-15",
@@ -9,7 +16,7 @@
         "readmeContains": "<!-- ultra-claude:promo -->"
       },
       "actions": [
-        "In the project's root README.md, find the line `_Built with [Ultra Claude](https://ultra-claude.dev) — spec-driven development for Claude Code._` that follows the `<!-- ultra-claude:promo -->` marker, and insert this badge line directly after it: [![Ultra Claude](https://img.shields.io/github/stars/duniecdawid/ultra-claude-code?style=social&label=Ultra%20Claude)](https://github.com/duniecdawid/ultra-claude-code)",
+        "In the project's root README.md, find the line `_Built with [Ultra Claude](https://ultra-claude.dev) — spec-driven development for Claude Code._` that follows the `<!-- ultra-claude:promo -->` marker, and insert this badge line directly after it: [![Ultra Claude](https://img.shields.io/github/stars/duniecdawid/ultra-claude?style=social&label=Ultra%20Claude)](https://github.com/duniecdawid/ultra-claude)",
         "Change nothing else in the README. The footer is purely additive and never rewrites existing content."
       ],
       "conflicts": "If the badge line is already present, this is a no-op. If the project removed or reworded the promo line but kept the marker, add the badge on its own line after the marker rather than reconstructing the original text — a project that deliberately edited the footer should keep its wording."

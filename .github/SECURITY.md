@@ -3,7 +3,7 @@
 ## Reporting a vulnerability
 
 Report security issues privately through GitHub's
-[private vulnerability reporting](https://github.com/duniecdawid/ultra-claude-code/security/advisories/new).
+[private vulnerability reporting](https://github.com/duniecdawid/ultra-claude/security/advisories/new).
 Please do not open a public issue for a vulnerability.
 
 Expect an acknowledgement within a week. Ultra Claude is maintained by one

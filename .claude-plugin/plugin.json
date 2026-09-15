@@ -1,12 +1,12 @@
 {
   "name": "uc",
-  "version": "2026.09.15-5",
+  "version": "2026.09.15-6",
   "description": "Specification-driven development platform for Claude Code",
   "author": {
     "name": "Dawid Duniec"
   },
   "homepage": "https://ultra-claude.dev",
-  "repository": "https://github.com/duniecdawid/ultra-claude-code",
+  "repository": "https://github.com/duniecdawid/ultra-claude",
   "license": "FSL-1.1-ALv2",
   "keywords": [
     "claude-code",

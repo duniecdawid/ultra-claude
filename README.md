@@ -1,121 +1,121 @@
 # Ultra Claude
 
-A Claude Code plugin that implements spec-driven development. Documentation governs code growth. Agent teams coordinate execution.
+[![Docs](https://img.shields.io/badge/docs-ultra--claude.dev-111?style=flat-square)](https://ultra-claude.dev)
+[![Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fduniecdawid%2Fultra-claude%2Fmain%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version&style=flat-square)](CHANGELOG.json)
+[![License](https://img.shields.io/badge/license-FSL--1.1--ALv2-blue?style=flat-square)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/duniecdawid/ultra-claude?style=flat-square)](https://github.com/duniecdawid/ultra-claude/stargazers)
 
-[**Documentation**](https://ultra-claude.dev)
+**Give Claude Code an engineering process.**
 
-## What This Is
+Claude Code is astonishing in week one and exhausting by week six: decisions nobody wrote
+down, inconsistent patterns, architecture that exists only in old chat sessions. Ultra
+Claude is a plugin that fixes that with a process rather than a better prompt — researched
+plans, enforced standards, agent-reviewed and tested code, and documentation that stays
+true to the codebase.
 
-Ultra Claude is a portable, reusable Claude Code plugin that turns any project into a structured, specification-driven development environment. You install it, it establishes a documentation layer, and from that point forward — documentation controls how the codebase grows.
+Full documentation: https://ultra-claude.dev
 
-It is NOT a framework, library, or runtime. It is a collection of **skills** and **agents** packaged as a Claude Code plugin. When installed in a project, Claude Code gains:
+---
 
-- Four specialized planning modes (Feature, Debug, Verification, Discovery) + one execution engine
-- Agent teams that coordinate research, implementation, and validation in parallel
-- Documentation-vs-code verification that detects drift
-- Technology standards enforcement (define → enforce → verify loop)
-- Plan management with checkpoint/recovery across sessions
-- A meta-skill ("Help") that teaches how to use the system
+## Install
 
-## Core Philosophy
+Two commands in any Claude Code session:
 
-- **Code is a derived artifact.** The specification is the source of truth. Architecture docs exist before code is written, and when code diverges from specs, you fix the spec first.
-- **Governance, not bureaucracy.** Documentation acts like zoning laws — you build freely within the constraints, but the constraints control direction.
-- **Proportional scrutiny.** Additive changes flow freely. Compatible changes get lightweight review. Breaking changes require updating the architecture doc first.
-
-## Installation
-
-```bash
-# Add the marketplace
-/plugin marketplace add duniecdawid/ultra-claude-code
-
-# Install the plugin
+```
+/plugin marketplace add duniecdawid/ultra-claude
 /plugin install uc@ultra-claude
 ```
 
-After installing, run setup to configure your machine (one-time):
+Every skill becomes a `/uc:*` slash command. Optionally keep it current automatically:
+
+```
+/plugin marketplace auto-update duniecdawid/ultra-claude
+```
+
+## Set up your machine
+
+Once per machine. Installs prerequisites, configures your shell for agent teams, and sets
+up tmux if you want the visual pane layout. Safe to re-run.
 
 ```
 /uc:setup
 ```
 
-Then initialize your target project:
+## Initialize a project
+
+Once per project, run from the project root. It reads your codebase, scaffolds
+`documentation/`, and derives architecture docs and coding standards from the patterns
+already there. Works on existing codebases, not just greenfield.
 
 ```
 /uc:migrate
 ```
 
-Use `/uc:help` to see all available commands.
+Review what it generated — `documentation/technology/architecture/` and
+`.../standards/`. Every planning skill reads these, so the more accurate they are, the
+better the plans.
 
-## Plugin Directory Structure
-
-> Skills with `user-invocable: true` become slash commands, namespaced as `/uc:{skill-name}` (e.g., `/uc:feature-mode`). The `uc` prefix comes from the `name` field in `.claude-plugin/plugin.json`.
+## Build something
 
 ```
-ultra-claude/
-├── .claude-plugin/
-│   ├── plugin.json                    # Plugin manifest (name, version, paths)
-│   └── marketplace.json               # Marketplace metadata
-├── settings.json                      # Plugin settings (agent teams flag)
-├── agents/                            # Agent definitions (flat .md with YAML frontmatter)
-│   ├── checker.md
-│   ├── code-review.md
-│   ├── code-surveyor.md
-│   ├── doc-surveyor.md
-│   ├── project-manager.md
-│   ├── researcher.md
-│   ├── system-tester.md
-│   ├── task-executor.md
-│   └── task-tester.md
-├── skills/                            # Skills (SKILL.md with YAML frontmatter)
-│   ├── backlog/
-│   ├── checkpoint/
-│   ├── context-management/
-│   ├── critical-brainstorm/
-│   ├── debug-mode/
-│   ├── discovery-mode/
-│   ├── doc-code-verification-mode/
-│   ├── docs-manager/
-│   ├── feature-mode/
-│   ├── help/
-│   ├── migrate/
-│   ├── plan-execution/
-│   ├── plan-status-sync/
-│   ├── railway/
-│   ├── research/
-│   ├── roadmap/
-│   ├── setup/
-│   ├── tailscale-setup/
-│   └── update/
-├── references/                        # Shared reference libraries (not skills)
-│   ├── plan-status-format.md          # plan.json schema
-│   └── planning-framework/            # 4-stage planning rules inherited by feature/debug/verification modes
-│       ├── framework.md
-│       └── stage-{1,2,3,4}.md
-├── templates/                         # Documentation templates for target projects
-│   ├── plan.md
-│   ├── task.md
-│   └── context.md
-├── scripts/                           # Runtime scripts
-│   ├── tmux-layout-daemon.js
-│   ├── tmux-session.sh
-│   ├── statusline.sh
-│   └── lib.sh
-├── docs/                              # Documentation website (Express + EJS)
-└── README.md
+/uc:feature-mode add user authentication
 ```
+
+Feature mode behaves like a senior tech lead: it challenges your scope, researches the
+codebase in parallel, and produces a structured plan with testable tasks — before any code
+is written. You approve the plan, then:
+
+```
+/uc:plan-execution {plan-name}
+```
+
+Each task gets a dedicated team: an **Executor** that writes the code, a **Reviewer** that
+enforces your standards, and a **Tester** that validates against the product docs. With
+tmux, they appear as live panes you can watch. Sessions can die and resume — checkpoints
+save progress.
+
+Run `/uc:help` any time to find the right command for what you are doing.
+
+---
+
+## What it is, and is not
+
+Not a framework, library, or runtime. It is 23 skills and 11 agents packaged as a Claude
+Code plugin, running entirely inside Claude Code on your machine. Nothing phones home,
+there is no account, and you pay only your normal Claude usage.
+
+The documentation it writes is plain markdown that stays useful on its own. Uninstall the
+plugin and your repository still works.
+
+**The idea it is built on:** code is a derived artifact. The specification is the source of
+truth, architecture docs exist before code is written, and when code diverges from the
+spec you fix the spec first. Documentation acts like zoning law — you build freely within
+the constraints, but the constraints control direction. Additive changes flow freely,
+compatible changes get lightweight review, breaking changes require updating the
+architecture doc first.
 
 ## Documentation
 
-Detailed documentation is available at [ultra-claude.dev](https://ultra-claude.dev):
+| Page | |
+|------|---|
+| https://ultra-claude.dev/getting-started | Install, setup, and first feature in 10 minutes |
+| https://ultra-claude.dev/docs/discovery | Product research and market analysis |
+| https://ultra-claude.dev/docs/feature-planning | Scope challenge, research, structured plans |
+| https://ultra-claude.dev/docs/plan-execution | Agent teams, task pipeline, checkpoints |
+| https://ultra-claude.dev/docs/debugging | Hypothesis-driven bug investigation |
+| https://ultra-claude.dev/docs/verification | Doc-code drift detection and fixes |
+| https://ultra-claude.dev/docs/standards | Define, enforce, and verify coding standards |
+| https://ultra-claude.dev/docs/reference | Every skill and agent |
 
-| Page | Purpose |
-|------|---------|
-| [Getting Started](https://ultra-claude.dev/getting-started) | Install, setup, and first feature in 10 minutes |
-| [Discovery](https://ultra-claude.dev/docs/discovery) | Product research and market analysis |
-| [Feature Planning](https://ultra-claude.dev/docs/feature-planning) | Scope challenge, research, structured plans |
-| [Plan Execution](https://ultra-claude.dev/docs/plan-execution) | Agent teams, task pipeline, checkpoints |
-| [Debugging](https://ultra-claude.dev/docs/debugging) | Hypothesis-driven bug investigation |
-| [Verification](https://ultra-claude.dev/docs/verification) | Doc-code drift detection and fixes |
-| [Technology Standards](https://ultra-claude.dev/docs/standards) | Define, enforce, and verify coding standards |
-| [Reference](https://ultra-claude.dev/docs/reference) | All 23 skills and 11 agents |
+## Contributing
+
+Bug reports and fixes are welcome — see [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the
+repository rules a pull request has to satisfy, and
+[Discussions](https://github.com/duniecdawid/ultra-claude/discussions) for questions,
+ideas, and showing what you built.
+
+## Licence
+
+[FSL-1.1-ALv2](LICENSE) — the Functional Source License. Use it, modify it, fork it and
+contribute back freely. The one thing you may not do is sell a competing product built on
+it. Every version converts to Apache 2.0 two years after release.

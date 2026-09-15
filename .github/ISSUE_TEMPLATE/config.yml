@@ -1,10 +1,10 @@
 blank_issues_enabled: false
 contact_links:
   - name: Show and tell
-    url: https://github.com/duniecdawid/ultra-claude-code/discussions/categories/show-and-tell
+    url: https://github.com/duniecdawid/ultra-claude/discussions/categories/show-and-tell
     about: Built something with Ultra Claude? Post it here.
   - name: Questions and ideas
-    url: https://github.com/duniecdawid/ultra-claude-code/discussions/categories/q-a
+    url: https://github.com/duniecdawid/ultra-claude/discussions/categories/q-a
     about: How do I do X, should it work this way, I wish it did Y.
   - name: Documentation
     url: https://ultra-claude.dev

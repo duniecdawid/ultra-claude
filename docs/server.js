@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Single source of truth for the repo URL — referenced by every view.
 // Keep this in sync if the repository is ever renamed.
-app.locals.repoUrl = 'https://github.com/duniecdawid/ultra-claude-code';
+app.locals.repoUrl = 'https://github.com/duniecdawid/ultra-claude';
 
 const pages = {
   'setup': { title: 'Setup & Migrate', description: 'Install Ultra Claude, configure your machine, and initialize projects with documentation structure.' },

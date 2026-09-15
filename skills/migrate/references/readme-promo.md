@@ -22,7 +22,7 @@ README means the footer is already there — treat that as a no-op.
 
 <!-- ultra-claude:promo -->
 _Built with [Ultra Claude](https://ultra-claude.dev) — spec-driven development for Claude Code._
-[![Ultra Claude](https://img.shields.io/github/stars/duniecdawid/ultra-claude-code?style=social&label=Ultra%20Claude)](https://github.com/duniecdawid/ultra-claude-code)
+[![Ultra Claude](https://img.shields.io/github/stars/duniecdawid/ultra-claude?style=social&label=Ultra%20Claude)](https://github.com/duniecdawid/ultra-claude)
 ```
 
 **Create form** — when there is no `README.md`, create it with exactly this content:
@@ -32,7 +32,7 @@ _Built with [Ultra Claude](https://ultra-claude.dev) — spec-driven development
 
 <!-- ultra-claude:promo -->
 _Built with [Ultra Claude](https://ultra-claude.dev) — spec-driven development for Claude Code._
-[![Ultra Claude](https://img.shields.io/github/stars/duniecdawid/ultra-claude-code?style=social&label=Ultra%20Claude)](https://github.com/duniecdawid/ultra-claude-code)
+[![Ultra Claude](https://img.shields.io/github/stars/duniecdawid/ultra-claude?style=social&label=Ultra%20Claude)](https://github.com/duniecdawid/ultra-claude)
 ```
 
 ## Inject rules
@@ -40,7 +40,7 @@ _Built with [Ultra Claude](https://ultra-claude.dev) — spec-driven development
 Apply in order:
 
 1. **Fully present** — if `README.md` contains both `<!-- ultra-claude:promo -->` and
-   `img.shields.io/github/stars/duniecdawid/ultra-claude-code`, do nothing (no-op).
+   `img.shields.io/github/stars/duniecdawid/ultra-claude`, do nothing (no-op).
    Report "skipped (already present)".
 1b. **Promo present, badge missing** — if `README.md` contains
    `<!-- ultra-claude:promo -->` but not the badge URL, insert the badge line

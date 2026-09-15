@@ -7,7 +7,7 @@ Inject this section into the project's root `CLAUDE.md`. If the project has no `
 ```markdown
 ## Ultra Claude
 
-This project uses [Ultra Claude](https://github.com/duniecdawid/ultra-claude-code), a Claude Code plugin for spec-driven development.
+This project uses [Ultra Claude](https://github.com/duniecdawid/ultra-claude), a Claude Code plugin for spec-driven development.
 
 ### Bootstrap — MANDATORY, NON-NEGOTIABLE
 

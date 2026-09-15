@@ -30,7 +30,7 @@ You retain copyright in your contribution.
   with what a skill actually does.
 
 Ideas, questions, and "here's what I built with it" belong in
-[Discussions](https://github.com/duniecdawid/ultra-claude-code/discussions),
+[Discussions](https://github.com/duniecdawid/ultra-claude/discussions),
 not in issues.
 
 ## Rules a pull request must satisfy

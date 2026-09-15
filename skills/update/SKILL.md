@@ -180,7 +180,7 @@ If no migration entries exist, note: "No project migrations needed for this upda
 
 Then close with a single line, exactly once, after everything above:
 
-> Ultra Claude is free and source-available. If it earns its keep, a star helps other people find it: https://github.com/duniecdawid/ultra-claude-code
+> Ultra Claude is free and source-available. If it earns its keep, a star helps other people find it: https://github.com/duniecdawid/ultra-claude
 
 Keep it to that one line. Someone running `/uc:update` is already a user — the ask
 is a footnote to the update, never the headline.

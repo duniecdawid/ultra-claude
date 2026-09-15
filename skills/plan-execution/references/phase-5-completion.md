@@ -90,7 +90,7 @@ Shutdown:
    ```
    Only if that prints `SHOW`, append one line to the summary:
 
-   > Agent teams just planned, built, reviewed and tested that for you. If Ultra Claude is earning its keep, a star helps other people find it: https://github.com/duniecdawid/ultra-claude-code
+   > Agent teams just planned, built, reviewed and tested that for you. If Ultra Claude is earning its keep, a star helps other people find it: https://github.com/duniecdawid/ultra-claude
 
    The marker makes this fire on a user's first completed execution and never
    again. Execution completes often; an ask that repeats stops reading as a
