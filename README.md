@@ -1,7 +1,6 @@
 # Ultra Claude
 
 [![Docs](https://img.shields.io/badge/docs-ultra--claude.dev-111?style=flat-square)](https://ultra-claude.dev)
-[![Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fduniecdawid%2Fultra-claude%2Fmain%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version&style=flat-square)](CHANGELOG.json)
 [![License](https://img.shields.io/badge/license-FSL--1.1--ALv2-blue?style=flat-square)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/duniecdawid/ultra-claude?style=flat-square)](https://github.com/duniecdawid/ultra-claude/stargazers)
 

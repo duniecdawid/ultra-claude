@@ -1,5 +1,12 @@
 [
   {
+    "seq": 250,
+    "version": "2026.09.15-7",
+    "date": "2026-09-15",
+    "summary": "README: drop the dynamic version badge — the shields.io dynamic/json endpoint returned 404 for it, so it rendered as a broken image. A version that changes on every commit is churn in a README anyway; the docs, licence and stars badges all verified rendering and stay",
+    "migration": null
+  },
+  {
     "seq": 249,
     "version": "2026.09.15-6",
     "date": "2026-09-15",
