@@ -177,3 +177,10 @@ If migration entries were found in Step 6, also include:
 >    Run `/uc:migrate` in each project to apply. You can do this now or next time you open each project.
 
 If no migration entries exist, note: "No project migrations needed for this update."
+
+Then close with a single line, exactly once, after everything above:
+
+> Ultra Claude is free and source-available. If it earns its keep, a star helps other people find it: https://github.com/duniecdawid/ultra-claude-code
+
+Keep it to that one line. Someone running `/uc:update` is already a user — the ask
+is a footnote to the update, never the headline.

@@ -1,5 +1,21 @@
 [
   {
+    "seq": 248,
+    "version": "2026.09.15-5",
+    "date": "2026-09-15",
+    "summary": "Post-install conversion: the website is a pre-install surface, so every link added to it reaches people who have not used Ultra Claude yet — and nobody stars software they have not used. The plugin owns the surfaces that fire afterwards. /uc:update closes with a one-line star ask (someone updating is by definition still a user); the plan-execution completion summary adds the same ask gated on a ~/.claude/ultra/star-asked marker so it fires on a user's first completed execution and never again. The /uc:migrate promo footer, which lands in every consuming project's README and until now pointed only at ultra-claude.dev, gains a GitHub stars badge — that footer is the project's one viral surface and none of its traffic reached the repo. Inject rules gain a branch distinguishing 'promo present, badge missing' from 'fully present', without which the idempotency marker would make every already-migrated project a no-op",
+    "migration": {
+      "precondition": {
+        "readmeContains": "<!-- ultra-claude:promo -->"
+      },
+      "actions": [
+        "In the project's root README.md, find the line `_Built with [Ultra Claude](https://ultra-claude.dev) — spec-driven development for Claude Code._` that follows the `<!-- ultra-claude:promo -->` marker, and insert this badge line directly after it: [![Ultra Claude](https://img.shields.io/github/stars/duniecdawid/ultra-claude-code?style=social&label=Ultra%20Claude)](https://github.com/duniecdawid/ultra-claude-code)",
+        "Change nothing else in the README. The footer is purely additive and never rewrites existing content."
+      ],
+      "conflicts": "If the badge line is already present, this is a no-op. If the project removed or reworded the promo line but kept the marker, add the badge on its own line after the marker rather than reconstructing the original text — a project that deliberately edited the footer should keep its wording."
+    }
+  },
+  {
     "seq": 247,
     "version": "2026.09.15-4",
     "date": "2026-09-15",

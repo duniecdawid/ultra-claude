@@ -84,3 +84,14 @@ Shutdown:
    ```
 5. Keep plan directory with all artifacts (including `operational-report.md`, `tasks/task-N/task.md`/`plan.md`/`impl.md`, and `shared/lead.md`)
 6. Present summary to user — mention that the operational report is available at `documentation/plans/$ARGUMENTS/operational-report.md`
+7. Star ask — **once per machine, ever**. Run:
+   ```bash
+   test -f ~/.claude/ultra/star-asked || { mkdir -p ~/.claude/ultra && touch ~/.claude/ultra/star-asked && echo SHOW; }
+   ```
+   Only if that prints `SHOW`, append one line to the summary:
+
+   > Agent teams just planned, built, reviewed and tested that for you. If Ultra Claude is earning its keep, a star helps other people find it: https://github.com/duniecdawid/ultra-claude-code
+
+   The marker makes this fire on a user's first completed execution and never
+   again. Execution completes often; an ask that repeats stops reading as a
+   thank-you and starts reading as nagging.
