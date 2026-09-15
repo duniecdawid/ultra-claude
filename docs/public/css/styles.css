@@ -688,6 +688,16 @@ tr:hover td { background: var(--muted); }
   color: var(--muted-foreground);
 }
 
+.trust-strip a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.trust-strip a:hover {
+  border-bottom-color: currentColor;
+}
+
 .trust-dot { color: var(--border); }
 
 /* ── Landing: stacked sections ── */

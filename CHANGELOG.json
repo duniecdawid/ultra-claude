@@ -1,5 +1,12 @@
 [
   {
+    "seq": 247,
+    "version": "2026.09.15-4",
+    "date": "2026-09-15",
+    "summary": "docs site: route visitors to the GitHub repo. The site linked to the repo from nowhere — a visitor could read every page, install the plugin via a slash command and never see the repository — which is the structural reason real traffic produced zero stars. Six placements, all sharing one github-click event name and distinguished by data-umami-event-position so a single conversion total stays readable: landing header star button, shared nav (covers getting-started plus all 13 doc pages), the previously unclickable Source available trust-strip text, a third button in the bottom CTA strip, the fixed footer byline, and a star ask directly under the install block on getting-started, which is the highest-intent moment on the site and previously carried no Umami events at all. Adds a .trust-strip anchor rule so making that text clickable does not change the strip visual weight. Verified by rendering all 15 routes: no unresolved repoUrl, correct link counts per route",
+    "migration": null
+  },
+  {
     "seq": 246,
     "version": "2026.09.15-3",
     "date": "2026-09-15",
