@@ -1,5 +1,12 @@
 [
   {
+    "seq": 253,
+    "version": "2026.10.10-3",
+    "date": "2026-10-10",
+    "summary": "docs site: share card renamed to og-image-v2.png and og:image/twitter:image repointed, so LinkedIn (which caches previews by image URL) fetches the 2x card instead of the cached original",
+    "migration": null
+  },
+  {
     "seq": 252,
     "version": "2026.10.10-2",
     "date": "2026-10-10",
