@@ -1,5 +1,12 @@
 [
   {
+    "seq": 252,
+    "version": "2026.10.10-2",
+    "date": "2026-10-10",
+    "summary": "docs site: share card re-rendered at 2x (2400x1254) so it stays sharp on LinkedIn, og:image size tags updated; em-dashes removed from page titles and descriptions that feed og/twitter tags (homepage title uses a colon, docs page titles use \"| Ultra Claude\")",
+    "migration": null
+  },
+  {
     "seq": 251,
     "version": "2026.10.10-1",
     "date": "2026-10-10",
