@@ -10,7 +10,7 @@
       "name": "uc",
       "source": "./",
       "description": "Specification-driven development platform for Claude Code",
-      "version": "2026.09.15-7",
+      "version": "2026.10.10-1",
       "category": "development",
       "homepage": "https://ultra-claude.dev",
       "license": "FSL-1.1-ALv2"

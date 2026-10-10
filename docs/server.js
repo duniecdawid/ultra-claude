@@ -12,6 +12,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Keep this in sync if the repository is ever renamed.
 app.locals.repoUrl = 'https://github.com/duniecdawid/ultra-claude';
 
+// Canonical public origin, used for absolute og:url / og:image URLs in the head.
+app.locals.siteUrl = 'https://ultra-claude.dev';
+
+app.use((req, res, next) => {
+  res.locals.canonicalUrl = app.locals.siteUrl + (req.path === '/' ? '/' : req.path.replace(/\/+$/, ''));
+  next();
+});
+
 const pages = {
   'setup': { title: 'Setup & Migrate', description: 'Install Ultra Claude, configure your machine, and initialize projects with documentation structure.' },
   'discovery': { title: 'Discovery', description: 'Product discovery and market research with AI-powered parallel investigation.' },

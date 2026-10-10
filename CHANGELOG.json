@@ -1,5 +1,12 @@
 [
   {
+    "seq": 251,
+    "version": "2026.10.10-1",
+    "date": "2026-10-10",
+    "summary": "docs site: share card (1200x627 og-image.png) plus og:url, og:image, canonical and twitter summary_large_image tags in the shared head, so links to ultra-claude.dev show a preview image on LinkedIn and X instead of a grey placeholder",
+    "migration": null
+  },
+  {
     "seq": 250,
     "version": "2026.09.15-7",
     "date": "2026-09-15",
